@@ -37,8 +37,8 @@ $(function(){
                             <div class="status">
                                 <ul>
                                     <li class="status-circle status-ofline" style="width:33%;"><a target='_blank' href="https://www.twitch.tv/`+name+`"><span class="fa fa-circle" aria-hidden="true"></span></a></li>
-                                    <li class="followers" style="width:33%;"><a href="#followers"><span class="fa fa-heart" aria-hidden="true"></span></a></li>
-                                    <li class="viewers" style="width:34%;"><a href="#viewers"><span class="fa fa-eye" aria-hidden="true"></span></a></li>
+                                    <li class="followers" style="width:33%;"><a title = "Followers: Offline" href="#followers"><span class="fa fa-heart" aria-hidden="true"></span></a></li>
+                                    <li class="viewers" style="width:34%;"><a title = "Viewers: Offline" href="#viewers"><span class="fa fa-eye" aria-hidden="true"></span></a></li>
                                 </ul>
                             </div>
                         </li>
@@ -55,9 +55,9 @@ $(function(){
                                 </div>
                                 <div class="status">
                                     <ul>
-                                        <li class="status-circle status-ofline" style="width:33%;"><a target='_blank' href="https://www.twitch.tv/`+name+`"><span class="fa fa-circle" aria-hidden="true"></span></a></li>
-                                        <li class="followers" style="width:33%;"><a href="#followers"><span class="fa fa-heart" aria-hidden="true"></span></a></li>
-                                        <li class="viewers" style="width:34%;"><a href="#viewers"><span class="fa fa-eye" aria-hidden="true"></span></a></li>
+                                        <li class="status-circle status-online" style="width:33%;"><a target='_blank' href="https://www.twitch.tv/`+name+`"><span class="fa fa-circle" aria-hidden="true"></span></a></li>
+                                        <li class="followers" style="width:33%;"><a title = "Followers: `+dataResul.stream.channel.followers+`" href="#followers"><span class="fa fa-heart" aria-hidden="true"></span></a></li>
+                                        <li class="viewers" style="width:34%;"><a title = "Viewers: `+dataResul.stream.channel.views+`" href="#viewers"><span class="fa fa-eye" aria-hidden="true"></span></a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -81,8 +81,8 @@ $(function(){
                                 <div class="status">
                                     <ul>
                                         <li class="status-circle status-ofline" style="width:33%;"><a target='_blank' href="#statusCircle"><span class="fa fa-circle" aria-hidden="true"></span></a></li>
-                                        <li class="followers" style="width:33%;"><a href="#followers"><span class="fa fa-heart" aria-hidden="true"></span></a></li>
-                                        <li class="viewers" style="width:34%;"><a href="#viewers"><span class="fa fa-eye" aria-hidden="true"></span></a></li>
+                                        <li class="followers" style="width:33%;"><a title = "Followers: Offline" href="#followers"><span class="fa fa-heart" aria-hidden="true"></span></a></li>
+                                        <li class="viewers" style="width:34%;"><a title = "Viewers: Offline" href="#viewers"><span class="fa fa-eye" aria-hidden="true"></span></a></li>
                                     </ul>
                                 </div>
                             </li>
