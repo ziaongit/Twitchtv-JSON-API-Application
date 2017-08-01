@@ -37,7 +37,7 @@ $(function(){
                             <div class="status">
                                 <ul>
                                     <li class="status-circle status-ofline" style="width:33%;"><a target='_blank' href="https://www.twitch.tv/`+name+`"><span class="fa fa-circle" aria-hidden="true"></span></a></li>
-                                    <li class="chat" style="width:33%;"><a href="#chat"><span class="fa fa-commenting-o" aria-hidden="true"></span></a></li>
+                                    <li class="followers" style="width:33%;"><a href="#followers"><span class="fa fa-heart" aria-hidden="true"></span></a></li>
                                     <li class="viewers" style="width:34%;"><a href="#viewers"><span class="fa fa-eye" aria-hidden="true"></span></a></li>
                                 </ul>
                             </div>
@@ -55,8 +55,8 @@ $(function(){
                                 </div>
                                 <div class="status">
                                     <ul>
-                                         <li class="status-circle" style="width:33%;"><a target='_blank' href="https://www.twitch.tv/`+name+`"><span class="fa fa-circle" aria-hidden="true"></span></a></li>
-                                        <li class="chat" style="width:33%;"><a href="#chat"><span class="fa fa-commenting-o" aria-hidden="true"></span></a></li>
+                                        <li class="status-circle status-ofline" style="width:33%;"><a target='_blank' href="https://www.twitch.tv/`+name+`"><span class="fa fa-circle" aria-hidden="true"></span></a></li>
+                                        <li class="followers" style="width:33%;"><a href="#followers"><span class="fa fa-heart" aria-hidden="true"></span></a></li>
                                         <li class="viewers" style="width:34%;"><a href="#viewers"><span class="fa fa-eye" aria-hidden="true"></span></a></li>
                                     </ul>
                                 </div>
@@ -80,8 +80,8 @@ $(function(){
                                 </div>
                                 <div class="status">
                                     <ul>
-                                        <li class="status-circle" style="width:33%;"><a href="#statusCircle"><span class="fa fa-circle" aria-hidden="true"></span></a></li>
-                                        <li class="chat" style="width:33%;"><a href="#chat"><span class="fa fa-commenting-o" aria-hidden="true"></span></a></li>
+                                        <li class="status-circle status-ofline" style="width:33%;"><a target='_blank' href="#statusCircle"><span class="fa fa-circle" aria-hidden="true"></span></a></li>
+                                        <li class="followers" style="width:33%;"><a href="#followers"><span class="fa fa-heart" aria-hidden="true"></span></a></li>
                                         <li class="viewers" style="width:34%;"><a href="#viewers"><span class="fa fa-eye" aria-hidden="true"></span></a></li>
                                     </ul>
                                 </div>

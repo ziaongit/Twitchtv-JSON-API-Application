@@ -103,7 +103,7 @@
 
 	.status-circle a,
 	.viewers a,
-	.chat a {
+	.followers a {
 		display: block;
 		width: 100%;
 		color: rgb(75, 110, 168) !important;
@@ -118,10 +118,12 @@
 		color: rgba(26, 128, 0, 0.93) !important;
 	}
 	.viewers a {
-		color: rgb(79, 213, 248) !important;
+        color: rgb(79, 213, 248) !important;
+        cursor: alias;
 	}
-	.chat a {
-		color: rgb(221, 75, 57) !important;
+	.followers a {
+        color: rgb(221, 75, 57) !important;
+        cursor: alias;
 	}
 	.status-circle:hover a {
 		color: rgb(255, 255, 255) !important;
@@ -135,7 +137,7 @@
 		color: rgb(255, 255, 255) !important;
 		background-color: rgb(79, 213, 248) !important;
 	}
-	.chat:hover a {
+	.followers:hover a {
 		color: rgb(255, 255, 255) !important;
 		background-color: rgb(221, 75, 57) !important;
     }
