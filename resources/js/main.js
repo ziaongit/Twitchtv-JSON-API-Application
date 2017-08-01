@@ -20,60 +20,47 @@ $(function(){
             success: function(data){
                 $.getJSON('https://api.twitch.tv/kraken/streams/'+ data.name +'?client_id=5ue27sf350l1tb5ik0d10vpshjt5ro')
                 .done(function(dataResul){
+                    console.log(dataResul);
                     
                     var name = dataResul._links.self.slice(37);
 
                     if(dataResul.stream === null) {
-                        console.log(data)
                         $('#channelInfo').append(`
-                        <div class="row justify-content-start">
-                            <div class="col-10 offset-md-1 mb-2">
-                                <div class="card card-danger">
-                                    <div class="card-block">
-                                        <div class="row">
-                                            <div class="col-md-2 col-sm-2 logo">
-                                                <img src="`+ data.logo+`" onerror="this.src='../resources/images/none.png'">
-                                            </div>
-                                            <div class="col-md-4 col-sm-4 name">
-                                                <h3 class="card-title"><a target='_blank' href="https://www.twitch.tv/`+ name+`">`+ name+`</a></h3>
-                                            </div>
-                                            <div class="col-md-3 col-sm-3 status">
-                                                <p class="card-text">Offline</p>
-                                            </div>
-                                            <div class="col-md-3 col-sm-3 stream">
-                                                <p>N/A</p>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <li>
+                            <img alt="Channel Logo" src="`+ data.logo+`" onerror="this.src='../resources/images/none.png'">
+                            <div class="info">
+                                <h2 class="title">`+ name+`</h2>
+                                <div class="alert alert-warning col-md-8 col-sm-12">
+                                    <strong>Sorry!!</strong> This channel is currently not streaming.
                                 </div>
                             </div>
-                        </div>
+                            <div class="status">
+                                <ul>
+                                    <li class="status-circle status-ofline" style="width:33%;"><a target='_blank' href="https://www.twitch.tv/`+name+`"><span class="fa fa-circle" aria-hidden="true"></span></a></li>
+                                    <li class="chat" style="width:33%;"><a href="#chat"><span class="fa fa-commenting-o" aria-hidden="true"></span></a></li>
+                                    <li class="viewers" style="width:34%;"><a href="#viewers"><span class="fa fa-eye" aria-hidden="true"></span></a></li>
+                                </ul>
+                            </div>
+                        </li>
                         `);
 
                     }else {
                         $('#channelInfo').append(`
-                            <div class="row justify-content-start">
-                                <div class="col-10 offset-md-1 mb-2">
-                                    <div class="card card-success">
-                                        <div class="card-block">
-                                            <div class="row">
-                                                <div class="col-md-2 col-sm-2 logo">
-                                                    <img src="`+ data.logo+`" onerror="this.src='../resources/images/none.png'">
-                                                </div>
-                                                <div class="col-md-4 col-sm-4 name">
-                                                    <h3 class="card-title"><a target='_blank' href="https://www.twitch.tv/`+ name+`">`+ name+`</a></h3>
-                                                </div>
-                                                <div class="col-md-3 col-sm-3 status">
-                                                    <p class="card-text">Online</p>
-                                                </div>
-                                                <div class="col-md-3 col-sm-3 stream">
-                                                    <p>`+ dataResul.stream.game+`</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <li>
+                                <img alt="Channel Logo" src="`+ data.logo+`" onerror="this.src='../resources/images/none.png'">
+                                <div class="info">
+                                    <h2 class="title">`+ name+`</h2>
+                                    <p class="desc">Game: `+ dataResul.stream.game+`</p>
+                                    <p class="desc">Status: `+ dataResul.stream.channel.status+`</p>
                                 </div>
-                            </div>
+                                <div class="status">
+                                    <ul>
+                                         <li class="status-circle" style="width:33%;"><a target='_blank' href="https://www.twitch.tv/`+name+`"><span class="fa fa-circle" aria-hidden="true"></span></a></li>
+                                        <li class="chat" style="width:33%;"><a href="#chat"><span class="fa fa-commenting-o" aria-hidden="true"></span></a></li>
+                                        <li class="viewers" style="width:34%;"><a href="#viewers"><span class="fa fa-eye" aria-hidden="true"></span></a></li>
+                                    </ul>
+                                </div>
+                            </li>
                         `);
                         $('#users').append(`
                         <li><a target="_blank" href="https://www.twitch.tv/`+ name+`">`+name +` is online</a></li>
@@ -83,28 +70,22 @@ $(function(){
             },
             error: function(err){
                 $('#channelInfo').append(`
-                        <div class="row justify-content-start">
-                            <div class="col-10 offset-md-1 mb-2">
-                                <div class="card card-danger">
-                                    <div class="card-block">
-                                        <div class="row">
-                                            <div class="col-md-2 col-sm-2 logo">
-                                                <img src="../resources/images/none.png">
-                                            </div>
-                                            <div class="col-md-4 col-sm-4 name">
-                                                <h3 class="card-title">Invalid user</h3>
-                                            </div>
-                                            <div class="col-md-3 col-sm-3 status">
-                                                <p class="card-text">Not Found</p>
-                                            </div>
-                                            <div class="col-md-3 col-sm-3 stream">
-                                                <p>N/A</p>
-                                            </div>
-                                        </div>
+                    <li>
+                                <img alt="Channel Logo" src="../resources/images/none.png" onerror="this.src='../resources/images/none.png'">
+                                <div class="info">
+                                    <h2 class="title">Invalid user</h2>
+                                        <div class="alert alert-warning col-md-8 col-sm-12">
+                                        <strong>Sorry!!</strong> This channel is currently not streaming.
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                                <div class="status">
+                                    <ul>
+                                        <li class="status-circle" style="width:33%;"><a href="#statusCircle"><span class="fa fa-circle" aria-hidden="true"></span></a></li>
+                                        <li class="chat" style="width:33%;"><a href="#chat"><span class="fa fa-commenting-o" aria-hidden="true"></span></a></li>
+                                        <li class="viewers" style="width:34%;"><a href="#viewers"><span class="fa fa-eye" aria-hidden="true"></span></a></li>
+                                    </ul>
+                                </div>
+                            </li>
                         `);
             }
         

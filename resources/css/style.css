@@ -1,0 +1,202 @@
+    @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic");
+    @import url("//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css");
+    body {
+		padding: 60px 0px;
+        background-image: url(../images/background.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }
+    h1 {
+        text-align: center;
+        color: #333;
+        padding: 10px;
+        margin-bottom: 30px;
+        font-family: 'Baloo Chettan', cursive;
+        font-weight: bold;
+        box-shadow: 4px 6px 5px;
+        text-shadow: 2px 2px #ffe6e6;
+    }
+    @media (max-width: 640px) {
+        h1 {
+            font-size: 20px;
+        }
+    }
+    .vertical-text {
+	transform: rotate(90deg);
+	transform-origin: left top 0;
+    }
+    
+    .channel-list {
+		list-style: none;
+		font-family: 'Lato', sans-serif;
+		margin: 0px;
+		padding: 0px;
+	}
+	.channel-list > li {
+		background-color: rgb(255, 255, 255);
+		box-shadow: 0px 0px 5px rgb(51, 51, 51);
+		box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.7);
+		padding: 0px;
+		margin: 0px 0px 20px;
+	}
+	.channel-list > li > img {
+		width: 100%;
+	}
+	.channel-list > li > .info {
+		padding-top: 5px;
+		text-align: center;
+	}
+	.channel-list > li > .info > .title {
+		font-size: 17pt;
+		font-weight: 700;
+		margin: 0px;
+    }
+    .title {
+        text-transform: uppercase;
+        font-family: serif;
+    }
+	.channel-list > li > .info > .desc {
+		font-size: 13pt;
+		font-weight: 300;
+		margin: 0px;
+	}
+	.channel-list > li > .info > ul,
+	.channel-list > li > .status > ul {
+		display: table;
+		list-style: none;
+		margin: 10px 0px 0px;
+		padding: 0px;
+		width: 100%;
+		text-align: center;
+	}
+	.channel-list > li > .status > ul {
+		margin: 0px;
+	}
+	.channel-list > li > .info > ul > li,
+	.channel-list > li > .status > ul > li {
+		display: table-cell;
+		cursor: pointer;
+		color: rgb(30, 30, 30);
+		font-size: 11pt;
+		font-weight: 300;
+        padding: 3px 0px;
+	}
+    .channel-list > li > .info > ul > li > a {
+		display: block;
+		width: 100%;
+		color: rgb(30, 30, 30);
+		text-decoration: none;
+	} 
+    .channel-list > li > .status > ul > li {    
+        padding: 0px;
+    }
+    .channel-list > li > .status > ul > li > a {
+        padding: 3px 0px;
+	} 
+	.channel-list > li > .info > ul > li:hover,
+	.channel-list > li > .status > ul > li:hover {
+		color: rgb(30, 30, 30);
+		background-color: rgb(200, 200, 200);
+    }
+
+	.status-circle a,
+	.viewers a,
+	.chat a {
+		display: block;
+		width: 100%;
+		color: rgb(75, 110, 168) !important;
+    }
+    .status-circle a {
+		color: rgba(26, 128, 0, 0.93) !important;
+    }
+    .status-ofline a {
+		color: rgba(232, 24, 9, 0.87) !important;
+    }
+    .status-online a {
+		color: rgba(26, 128, 0, 0.93) !important;
+	}
+	.viewers a {
+		color: rgb(79, 213, 248) !important;
+	}
+	.chat a {
+		color: rgb(221, 75, 57) !important;
+	}
+	.status-circle:hover a {
+		color: rgb(255, 255, 255) !important;
+		background-color: rgba(26, 128, 0, 0.93) !important;
+    }
+    .status-ofline:hover a {
+        color: rgb(255, 255, 255) !important;
+		background-color: rgba(232, 24, 9, 0.87) !important;
+    }
+	.viewers:hover a {
+		color: rgb(255, 255, 255) !important;
+		background-color: rgb(79, 213, 248) !important;
+	}
+	.chat:hover a {
+		color: rgb(255, 255, 255) !important;
+		background-color: rgb(221, 75, 57) !important;
+    }
+    
+	@media (min-width: 768px) {
+		.channel-list > li {
+			position: relative;
+			display: block;
+			width: 100%;
+			height: 120px;
+			padding: 0px;
+		}
+		.channel-list > li > img  {
+			display: inline-block;
+		}
+		.channel-list > li > img {
+			width: 120px;
+			float: left;
+		}
+		.channel-list > li > .info {
+			background-color: rgb(245, 245, 245);
+			overflow: hidden;
+		}
+		.channel-list > li > img {
+			width: 120px;
+			height: 120px;
+			padding: 0px;
+			margin: 0px;
+		}
+		.channel-list > li > .info {
+			position: relative;
+			height: 120px;
+			text-align: left;
+			padding-right: 40px;
+		}	
+		.channel-list > li > .info > .title, 
+		.channel-list > li > .info > .desc {
+			padding: 0px 10px;
+		}
+		.channel-list > li > .info > ul {
+			position: absolute;
+			left: 0px;
+			bottom: 0px;
+		}
+		.channel-list > li > .status {
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			display: block;
+			width: 40px;
+		}
+        .channel-list > li > .status > ul {
+            border-left: 1px solid rgb(230, 230, 230);
+        }
+		.channel-list > li > .status > ul > li {			
+			display: block;
+            padding: 0px;
+		}
+		.channel-list > li > .status > ul > li > a {
+			display: block;
+			width: 40px;
+			padding: 10px 0px 9px;
+		}
+	}
